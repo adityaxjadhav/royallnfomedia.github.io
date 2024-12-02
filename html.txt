@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Royallnfo.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Reset styles */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f4f4;
+    }
+
+/* Header styling */
+.header-container {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start (left) */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container img {
+  max-height: 80px;
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px; /* Spacing between logo and heading */
+}
+
+.header-container h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  flex-grow: 1;
+  text-align: left; /* Ensures heading stays aligned to the left */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: nowrap; /* Prevents wrapping */
+    justify-content: flex-start; /* Ensures logo remains at the left */
+  }
+
+  .header-container img {
+    margin-right: 10px;
+  }
+
+  .header-container h1 {
+    font-size: 1.5rem;
+    text-align: left; /* Forces heading alignment to the left */
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: nowrap; /* Prevents wrapping of the header elements */
+  }
+
+  .header-container img {
+    margin-right: 10px;
+  }
+
+  .header-container h1 {
+    font-size: 1.5rem;
+    text-align: left; /* Forces heading alignment to the left */
+  }
+}
+
+    /* Navigation bar styling */
+    .navigation {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      background: #34495e;
+      padding: 10px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navigation button {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+      padding: 10px 15px;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .navigation button:hover {
+      background: white;
+      color: #34495e;
+      transform: scale(1.05);
+    }
+
+    /* Main content */
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .page-content {
+      display: none;
+    }
+
+    #home {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      background: #ecf0f1;
+      color: #2c3e50;
+    }
+
+    #home h2 {
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    #home p {
+      font-size: 1rem;
+      color: #7f8c8d;
+      margin-bottom: 20px;
+    }
+
+    #home .about-us-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      background: #95a5a6;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    #home .about-us-button:hover {
+      background: #7f8c8d;
+      transform: translateY(-3px);
+    }
+
+    /* Login & Sign-Up Form Styles */
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-container button {
+      width: 100%;
+      padding: 12px;
+      background: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-container button:hover {
+      background-color: #34495e;
+    }
+
+    /* Google Maps */
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+      }
+
+      .header-container h1 {
+        font-size: 1.5rem;
+      }
+
+      .navigation button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+      }
+
+      #home h2 {
+        font-size: 1.8rem;
+      }
+
+      #home p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header-container">
+    <img src="images/logo.jpg" alt="RoyallnfoMedia Logo">
+    <h1>RoyallnfoMedia</h1>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navigation">
+    <button onclick="navigate('home')">Home</button>
+    <button onclick="navigate('contact')">Contact Us</button>
+    <button onclick="navigate('login')">Login</button>
+    <button onclick="navigate('signup')">Sign Up</button>
+  </nav>
+
+  <!-- Main content -->
+  <main id="content">
+    <!-- Home Section -->
+    <section id="home" class="page-content" style="display: block;">
+      <h2>Welcome to RoyallnfoMedia</h2>
+      <p>Your go-to platform for all things digital!</p>
+      <button class="about-us-button" onclick="navigate('about')">Learn More About Us</button>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="page-content">
+      <h2>About Us</h2>
+      <p>Welcome to RoyallnfoMedia, where innovation meets excellence...</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-content">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:adityajadhav@gmail.com">adityajadhav@gmail.com</a></p>
+      <p>Mobile: <a href="tel:+919890508896">9890508896</a></p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.4563071660527!2d73.75526227519471!3d18.643508782473976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b916d438e1f9%3A0x373a085c90dfefa!2sROYAL%20INFOMEDIA%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1733061520240!5m2!1sen!2sin"
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="page-content">
+      <h2>Login</h2>
+      <div class="form-container">
+        <input type="email" placeholder="Enter your email" id="loginEmail" />
+        <input type="password" placeholder="Enter your password" id="loginPassword" />
+        <button onclick="login()">Login</button>
+      </div>
+    </section>
+
+    <!-- Sign Up Section -->
+    <section id="signup" class="page-content">
+      <h2>Sign Up</h2>
+      <div class="form-container">
+        <input type="text" placeholder="Enter your name" id="signupName" />
+        <input type="email" placeholder="Enter your email" id="signupEmail" />
+        <input type="password" placeholder="Enter your password" id="signupPassword" />
+        <button onclick="signup()">Sign Up</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 RoyallnfoMedia. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function navigate(section) {
+      document.querySelectorAll('.page-content').forEach(function(page) {
+        page.style.display = 'none';
+      });
+      document.getElementById(section).style.display = 'block';
+    }
+
+    function login() {
+      alert('Login functionality is not implemented yet.');
+    }
+
+    function signup() {
+      alert('Signup functionality is not implemented yet.');
+    }
+  </script>
+</body>
+</html>

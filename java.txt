@@ -1,0 +1,32 @@
+function navigate(page) {
+    // Hide all sections
+    const pages = document.querySelectorAll('.page-content');
+    pages.forEach(page => {
+      page.style.display = 'none';
+    });
+  
+    // Show the selected page
+    const selectedPage = document.getElementById(page);
+    if (selectedPage) {
+      selectedPage.style.display = 'block';
+    }
+  }
+  function navigate(page) {
+    // Hide all sections
+    const pages = document.querySelectorAll('.page-content');
+    pages.forEach(page => {
+      page.style.display = 'none';
+    });
+  
+    // Show the selected page
+    const selectedPage = document.getElementById(page);
+    if (selectedPage) {
+      selectedPage.style.display = 'block';
+    }
+  }
+  
+  // Call navigate('home') when the page loads to show the home page by default
+  window.onload = () => {
+    navigate('home');
+  };
+  
